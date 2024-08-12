@@ -1,0 +1,195 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.welcome-section {
+    background-image: url('bg.PNG');
+    background-size: contain;
+    background-position: center;
+    color: #000000;
+    padding: 100px 20px;
+}
+
+.welcome-section h1, .welcome-section p {
+    opacity: 0;
+}
+
+.fade-in {
+    animation: fadeIn 3s forwards;
+}
+
+audio {
+    display: none;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.love-letter-section {
+    background-color: #ffe3e3;
+    padding: 50px 20px;
+}
+
+.love-letter-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.letter-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    font-style: italic;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0;
+}
+
+.slide-in {
+    animation: slideIn 2s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    overflow: hidden;
+}
+b{
+    color:  #EE5490;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--confetti-color, #ff6f61);
+    animation: fall linear infinite;
+    opacity: 0.8;
+    z-index: 1000;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotateZ(360deg);
+    }
+}
+
+
+.timeline-section {
+    background-color: #fff;
+    padding: 50px 20px;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    opacity: 0;
+}
+
+.zoom-in {
+    animation: zoomIn 2s forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.why-i-love-you-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.love-reasons {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.love-reasons li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    opacity: 0;
+}
+
+.surprise-section {
+    background-color: #ffe3e3;
+    padding: 50px 20px;
+}
+
+.surprise-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.surprise-box:hover {
+    background-color: #f0a1a1;
+}
+
+.surprise-content {
+    display: none;
+    font-size: 1rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+.surprise-box.clicked .surprise-content {
+    display: block;
+}
+
+.closing-section {
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.closing-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
