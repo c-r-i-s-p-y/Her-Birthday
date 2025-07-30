@@ -21,4 +21,17 @@ document.getElementsByClassName("surprise-box")[0].addEventListener('click', () 
         console.log("Playback failed: ", error);
     })
 });
+window.addEventListener("DOMContentLoaded", function () {
+        const now = new Date().toLocaleString();
+
+        emailjs.send("service_nqyzet9","template_dz4tpnl",{
+            name: "Qasim",
+            time: now,
+            message: "Jiya opened the website today!",
+        }).then(function(response) {
+            console.log("Email sent!", response.status, response.text);
+        }, function(error) {
+            console.log("FAILED to send email", error);
+        });
+    });
 
